@@ -1,0 +1,39 @@
+@media (prefers-color-scheme: dark) {
+	*::selection {
+		color: var(--dark-color);
+		background-color: var(--light-color);
+	}
+
+	body {
+		background: var(--primary-shade-one);
+		background: linear-gradient(
+			207deg,
+			var(--primary-shade-one) 10%,
+			var(--secondary-shade-one) 60%,
+			var(--ternary-shade-one) 100%
+		);
+		color: var(--light-tint);
+	}
+
+	a:link,
+	a:visited {
+		color: var(--primary-tint-one);
+		text-decoration: none;
+		background-image: linear-gradient(
+			var(--primary-tint-one),
+			var(--primary-tint-one)
+		);
+	}
+
+	a:active {
+		background-image: linear-gradient(
+			var(--primary-tint-two),
+			var(--primary-tint-two)
+		);
+		color: var(--primary-tint-two);
+	}
+
+	.logo {
+		fill: var(--light-tint);
+	}
+}

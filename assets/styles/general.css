@@ -1,0 +1,126 @@
+@import url("../fonts/vazirmatn.css");
+@import url("./darkMode.css");
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--dark-tint: #83888a;
+	--dark-color: #31393c;
+	--dark-shade: #191d1e;
+
+	--primary-tint-one: #7aadff;
+	--primary-tint-two: #4d91ff;
+	--primary-color: #2176ff;
+	--primary-shade-one: #144799;
+	--primary-shade-two: #0d2f66;
+
+	--secondary-tint-one: #e6949b;
+	--secondary-tint-two: #d6545e;
+	--secondary-color: #cc2936;
+	--secondary-shade-one: #7a1920;
+	--secondary-shade-two: #3d0c10;
+
+	--ternary-tint-one: #fbcc92;
+	--ternary-tint-two: #f9b766;
+	--ternary-color: #f79824;
+	--ternary-shade-one: #c67a1d;
+	--ternary-shade-two: #945b16;
+
+	--light-tint: #f5f5f6;
+	--light-color: #eaebec;
+	--light-shade: #bbbcbd;
+}
+
+html {
+	font-family: "Vazirmatn", system-ui, -apple-system, BlinkMacSystemFont,
+		"Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+		sans-serif;
+	font-size: 62.5%;
+	direction: rtl;
+	min-height: 100dvh;
+}
+
+body {
+	min-height: 100dvh;
+	background: var(--primary-tint-one);
+	background: linear-gradient(
+		207deg,
+		var(--primary-tint-one) 10%,
+		var(--secondary-tint-one) 60%,
+		var(--ternary-tint-one) 95%
+	);
+	color: var(--dark-shade);
+	font-size: 1.8rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 1.4rem;
+	text-align: center;
+	text-wrap: balance;
+}
+
+*::selection {
+	color: var(--light-color);
+	background-color: var(--dark-color);
+}
+
+a:link,
+a:visited {
+	color: var(--primary-shade-one);
+	text-decoration: none;
+	background-image: linear-gradient(
+		var(--primary-shade-one),
+		var(--primary-shade-one)
+	);
+	transition: background-size 0.2s ease-in-out;
+	background-size: 0% 0.2rem;
+	background-position-y: 100%;
+	background-position-x: 0%;
+	background-repeat: no-repeat;
+}
+
+a:hover {
+	background-size: 100% 0.2rem;
+	background-position-x: 100%;
+}
+
+a:active {
+	background-image: linear-gradient(
+		var(--primary-shade-two),
+		var(--primary-shade-two)
+	);
+	color: var(--primary-shade-two);
+}
+
+header {
+	font-size: 2rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 1.4rem;
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 90%;
+	max-width: 80rem;
+	margin: 0 auto;
+	padding: 2rem;
+	gap: 2rem;
+}
+
+.logo {
+	fill: var(--dark-shade);
+	width: 15rem;
+	height: 15rem;
+}
